@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">calculator</string>
+
+    <string name="year">年份</string>
+    <string name="age">年龄</string>
+    <string name="cash">年初追加</string>
+    <string name="win">年末收益</string>
+    <string name="cashs">年末本息</string>
+</resources>
