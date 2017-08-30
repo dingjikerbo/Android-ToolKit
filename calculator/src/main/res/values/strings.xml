@@ -1,9 +1,59 @@
 <resources>
-    <string name="app_name">calculator</string>
+    <string name="app_name">复利计算器</string>
 
     <string name="year">年份</string>
     <string name="age">年龄</string>
     <string name="cash">年初追加</string>
+    <string name="cashs">本金总和</string>
     <string name="win">年末收益</string>
-    <string name="cashs">年末本息</string>
+    <string name="sums">年末本息</string>
+
+    <string name="first_cash">初始本金</string>
+    <string name="cash_year">追加年限</string>
+    <string name="cash_ratio">年增长率</string>
+
+    <string name="end_year">投资年限</string>
+    <string name="win_ratio">年收益率</string>
+
+    <string name="start">开始计算</string>
+    <string name="fd">fda</string>
+
+    <string-array name="inc_ratio">
+        <item>0%</item>
+        <item>5%</item>
+        <item>10%</item>
+        <item>15%</item>
+        <item>20%</item>
+        <item>25%</item>
+        <item>30%</item>
+        <item>35%</item>
+        <item>40%</item>
+        <item>45%</item>
+        <item>50%</item>
+    </string-array>
+
+    <string-array name="year">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+
+
+    </string-array>
+
+    <string-array name="win_ratio">
+        <item>0%</item>
+        <item>5%</item>
+        <item>10%</item>
+        <item>15%</item>
+        <item>20%</item>
+        <item>25%</item>
+        <item>30%</item>
+        <item>35%</item>
+        <item>40%</item>
+        <item>45%</item>
+        <item>50%</item>
+    </string-array>
 </resources>

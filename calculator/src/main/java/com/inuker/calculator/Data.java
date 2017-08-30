@@ -7,10 +7,10 @@ package com.inuker.calculator;
 public class Data {
 
     public static final int YEAR = 0;
-    public static final int AGE = 1;
-    public static final int CASH = 2;
+    public static final int CASH = 1;
+    public static final int CASHS = 2;
     public static final int WINS = 3;
-    public static final int CASHS = 4;
+    public static final int SUMS = 4;
 
     private int type;
 

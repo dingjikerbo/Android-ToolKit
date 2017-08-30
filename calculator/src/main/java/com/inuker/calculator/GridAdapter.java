@@ -10,9 +10,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.inuker.calculator.Data.AGE;
 import static com.inuker.calculator.Data.CASH;
 import static com.inuker.calculator.Data.CASHS;
+import static com.inuker.calculator.Data.SUMS;
 import static com.inuker.calculator.Data.WINS;
 import static com.inuker.calculator.Data.YEAR;
 
@@ -27,12 +27,12 @@ public class GridAdapter extends BaseAdapter {
     /**
      * 初始本金
      */
-    private int startCash = 100000;
+    private int firstCash = 100000;
 
     /**
      * 每年投资的本金增长比率
      */
-    private float incRatio = 0.1f;
+    private float incRatio = 0.0f;
 
     /**
      * 投资年收益率
@@ -40,24 +40,14 @@ public class GridAdapter extends BaseAdapter {
     private float winRatio = 0.1f;
 
     /**
-     * 投资元年
-     */
-    private int startYear = 2017;
-
-    /**
-     * 出生年
-     */
-    private int birthYear = 1988;
-
-    /**
      * 多少年后结算
      */
-    private int endYears = 30;
+    private int allYears = 30;
 
     /**
      * 持续投入本金多少年
      */
-    private int cashYear = 20;
+    private int cashYears = 10;
 
     private Context mContext;
 
@@ -74,10 +64,10 @@ public class GridAdapter extends BaseAdapter {
 
     private void generateTitle() {
         mDataList.add(new Data(YEAR, mContext.getString(R.string.year)));
-        mDataList.add(new Data(AGE, mContext.getString(R.string.age)));
         mDataList.add(new Data(CASH, mContext.getString(R.string.cash)));
-        mDataList.add(new Data(WINS, mContext.getString(R.string.win)));
         mDataList.add(new Data(CASHS, mContext.getString(R.string.cashs)));
+        mDataList.add(new Data(WINS, mContext.getString(R.string.win)));
+        mDataList.add(new Data(SUMS, mContext.getString(R.string.sums)));
     }
 
     private void generateDataList() {
@@ -85,21 +75,21 @@ public class GridAdapter extends BaseAdapter {
 
         generateTitle();
 
-        int cash = startCash, cashSum = 0, sum = 0;
+        int cash = firstCash, cashSum = 0, sum = 0;
 
-        for (int year = startYear; year < startYear + endYears; year++) {
+        for (int year = 1; year <= allYears; year++) {
             mDataList.add(new Data(YEAR, year));
-            mDataList.add(new Data(AGE, year - birthYear));
-
             mDataList.add(new Data(CASH, cash));
 
             cashSum += cash;
+            mDataList.add(new Data(CASHS, cashSum));
+
             sum = (int) ((sum + cash) * (1 + winRatio));
 
             mDataList.add(new Data(WINS, sum - cashSum));
             mDataList.add(new Data(CASHS, sum));
 
-            if (year - startYear > cashYear) {
+            if (year >= cashYears) {
                 cash = 0;
             } else {
                 cash *= 1 + incRatio;
@@ -107,8 +97,8 @@ public class GridAdapter extends BaseAdapter {
         }
     }
 
-    public void setStartCash(int startCash) {
-        this.startCash = startCash;
+    public void setFirstCash(int firstCash) {
+        this.firstCash = firstCash;
     }
 
     public void setIncRatio(float incRatio) {
@@ -119,20 +109,32 @@ public class GridAdapter extends BaseAdapter {
         this.winRatio = winRatio;
     }
 
-    public void setStartYear(int startYear) {
-        this.startYear = startYear;
+    public float getIncRatio() {
+        return incRatio;
     }
 
-    public void setBirthYear(int birthYear) {
-        this.birthYear = birthYear;
+    public float getWinRatio() {
+        return winRatio;
     }
 
-    public void setEndAge(int endAge) {
-        this.endYears = endAge;
+    public int getAllYears() {
+        return allYears;
     }
 
-    public void setCachYear(int cachYear) {
-        this.cashYear = cachYear;
+    public void setAllYears(int allYears) {
+        this.allYears = allYears;
+    }
+
+    public int getCashYears() {
+        return cashYears;
+    }
+
+    public void setCashYears(int cashYears) {
+        this.cashYears = cashYears;
+    }
+
+    public int getFirstCash() {
+        return firstCash;
     }
 
     @Override
