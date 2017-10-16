@@ -1,1 +1,1 @@
-include ':app', ':calculator', ':nfc', ':library'
+include ':app', ':calculator', ':library'
