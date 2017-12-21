@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Android-ToolKit.iml" filepath="$PROJECT_DIR$/Android-ToolKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Android-ToolKit.iml" filepath="$PROJECT_DIR$/Android-ToolKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CheckDuplicate/CheckDuplicate.iml" filepath="$PROJECT_DIR$/CheckDuplicate/CheckDuplicate.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/calculator/calculator.iml" filepath="$PROJECT_DIR$/calculator/calculator.iml" />
