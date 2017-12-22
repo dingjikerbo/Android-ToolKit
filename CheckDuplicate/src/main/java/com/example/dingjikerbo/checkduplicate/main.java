@@ -7,12 +7,12 @@ import java.util.List;
 
 public class main {
 
-    private static final int SEGMENT = 3;
+    private static final int SEGMENT = 15;
     private static final String[] SPLITER = new String[] {"？", "！", "。"};
 
     public static void main(String[] args) {
         try {
-            List<String> text1 = FileUtils.readFile("test1.txt");
+            List<String> text1 = FileUtils.readFile("my.txt");
             List<String> result1 = split(text1, SPLITER);
 
             List<String> text2 = FileUtils.readFile("test2.txt");
@@ -70,7 +70,7 @@ public class main {
         for (String s : list1) {
             for (String t : list2) {
                 if (like(s, t)) {
-                    map.computeIfAbsent(s, k -> new LinkedList<String>()).add(t);
+                    map.computeIfAbsent(s, k -> new LinkedList<>()).add(t);
                 }
             }
         }
