@@ -7,7 +7,7 @@ import java.util.List;
 
 public class main {
 
-    private static final int SEGMENT = 13;
+    private static final int SEGMENT = 10;
     private static final String[] SPLITER = new String[] {"？", "！", "。"};
 
     public static void main(String[] args) {
