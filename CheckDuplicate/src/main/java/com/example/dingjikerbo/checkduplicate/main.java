@@ -18,12 +18,12 @@ public class main {
             List<String> text2 = FileUtils.readFile("test2.txt");
             List<String> result2 = split(text2, SPLITER);
 
-            HashMap<String, List<String>> map = check(result1, result2);
+            HashMap<String, String[]> map = check(result1, result2);
             for (String key : map.keySet()) {
-                System.out.println(">>>>>>>>>: " + key);
-                for (String s : map.get(key)) {
-                    System.out.println(s);
-                }
+                System.out.println("我的句子: " + key);
+                String[] pair = map.get(key);
+                System.out.println("重复部分: " + pair[1]);
+                System.out.println("对比句子: " + pair[0]);
                 System.out.println();
             }
         } catch (IOException e) {
@@ -65,25 +65,36 @@ public class main {
         return result;
     }
 
-    private static HashMap<String, List<String>> check(List<String> list1, List<String> list2) {
-        HashMap<String, List<String>> map = new HashMap<>();
+    private static HashMap<String, String[]> check(List<String> list1, List<String> list2) {
+        HashMap<String, String[]> map = new HashMap<>();
         for (String s : list1) {
+            String max = "", target = "";
             for (String t : list2) {
-                if (like(s, t)) {
-                    map.computeIfAbsent(s, k -> new LinkedList<>()).add(t);
+                String p = like(s, t);
+                if (p.length() > max.length()) {
+                    max = p;
+                    target = t;
                 }
+            }
+            if (max.length() > 0) {
+                map.put(s, new String[] {target, max});
             }
         }
         return map;
     }
 
-    private static boolean like(String s, String t) {
-        for (int i = 0; i <= s.length() - SEGMENT; i++) {
-            String ss = s.substring(i, i + SEGMENT);
-            if (t.contains(ss)) {
-                return true;
+    private static String like(String s, String t) {
+        String max = "";
+        for (int i = 0; i <= s.length(); i++) {
+            for (int j = SEGMENT; i + j <= s.length(); j++) {
+                String ss = s.substring(i, i + j);
+                if (t.contains(ss)) {
+                    if (ss.length() > max.length()) {
+                        max = ss;
+                    }
+                }
             }
         }
-        return false;
+        return max;
     }
 }
