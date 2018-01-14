@@ -1,1 +1,1 @@
-include ':app', ':calculator', ':library', ':CheckDuplicate'
+include ':app', ':calculator', ':library', ':CheckDuplicate', ':linetrim'
