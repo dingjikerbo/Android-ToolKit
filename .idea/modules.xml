@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/calculator/calculator.iml" filepath="$PROJECT_DIR$/calculator/calculator.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/linetrim/linetrim.iml" filepath="$PROJECT_DIR$/linetrim/linetrim.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stock/stock.iml" filepath="$PROJECT_DIR$/stock/stock.iml" />
     </modules>
   </component>
 </project>
