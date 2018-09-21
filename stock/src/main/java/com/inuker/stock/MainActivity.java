@@ -148,6 +148,11 @@ public class MainActivity extends Activity {
          */
         float leftMoney = 0f;
 
+        /**
+         * 盈利
+         */
+        int gain = 0;
+
         for (int i = 0; i < mContainer.getChildCount(); i++) {
             ViewHolder holder = (ViewHolder) mContainer.getChildAt(i).getTag();
             float price = getPrice(holder);
@@ -178,8 +183,10 @@ public class MainActivity extends Activity {
                 leftMoney += -price * count;
             }
 
+            gain = (int) (allCount * price + leftMoney - allMoney);
+
             float base = allStock / allCount;
-            holder.result.setText(getString(R.string.result_desc, allMoney, leftMoney, allCount, base));
+            holder.result.setText(getString(R.string.result_desc, allMoney, leftMoney, allCount, base, gain));
         }
     }
 

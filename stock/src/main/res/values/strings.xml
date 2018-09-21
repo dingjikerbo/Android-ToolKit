@@ -7,5 +7,5 @@
     <string name="add">添加</string>
     <string name="del">删除</string>
     <string name="line_uncomplete">当前交易未完成</string>
-    <string name="result_desc">本金：%1$.2f，余额：%2$.2f\n股数：%3$d，成本：%4$.2f</string>
+    <string name="result_desc">本金：%1$.2f，余额：%2$.2f\n股数：%3$d，成本：%4$.3f\n盈利: %5$d</string>
 </resources>
