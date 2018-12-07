@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">复利计算器</string>
+    <string name="app_name">投资计算器</string>
 
     <string name="invest_calc">投资复利计算</string>
     <string name="stock_calc">股票成本计算</string>
