@@ -1,0 +1,17 @@
+// set the buffer consumer that the preview will use
+status_t CameraClient::setPreviewTarget(
+        const sp<IGraphicBufferProducer>& bufferProducer) {
+    LOG1("setPreviewTarget(%p) (pid %d)", bufferProducer.get(),
+            getCallingPid());
+
+    sp<IBinder> binder;
+    sp<ANativeWindow> window;
+    if (bufferProducer != 0) {
+        binder = bufferProducer->asBinder();
+        // Using controlledByApp flag to ensure that the buffer queue remains in
+        // async mode for the old camera API, where many applications depend
+        // on that behavior.
+        window = new Surface(bufferProducer, /*controlledByApp*/ true);
+    }
+    return setPreviewWindow(binder, window);
+}

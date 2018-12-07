@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Android-ToolKit.iml" filepath="$PROJECT_DIR$/Android-ToolKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linetrim.iml" filepath="$PROJECT_DIR$/linetrim.iml" />
     </modules>
   </component>
 </project>

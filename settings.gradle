@@ -1,1 +1,0 @@
-include ':app', ':calculator', ':library', ':CheckDuplicate', ':linetrim', ':stock'

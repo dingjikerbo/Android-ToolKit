@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">复利计算器</string>
+
+    <string name="invest_calc">投资复利计算</string>
+    <string name="stock_calc">股票成本计算</string>
+
+    <string name="year">年份</string>
+    <string name="age">年龄</string>
+    <string name="cash">年初追加</string>
+    <string name="cashs">本金总和</string>
+    <string name="win">当年收益</string>
+    <string name="wins">收益总和</string>
+    <string name="sums">年末本息</string>
+
+    <string name="first_cash">初始本金</string>
+    <string name="cash_year">追加年限</string>
+    <string name="cash_ratio">年增长率</string>
+
+    <string name="end_year">投资年限</string>
+    <string name="win_ratio">年收益率</string>
+
+    <string name="start">开始计算</string>
+    <string name="fd">fda</string>
+
+    <string-array name="first_cash">
+        <item>100000</item>
+        <item>200000</item>
+        <item>300000</item>
+        <item>400000</item>
+        <item>500000</item>
+    </string-array>
+
+    <string-array name="inc_ratio">
+        <item>0%</item>
+        <item>5%</item>
+        <item>10%</item>
+        <item>15%</item>
+        <item>20%</item>
+        <item>25%</item>
+        <item>30%</item>
+    </string-array>
+
+    <string-array name="year">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+        <item>60</item>
+
+    </string-array>
+
+    <string-array name="win_ratio">
+        <item>0%</item>
+        <item>5%</item>
+        <item>10%</item>
+        <item>15%</item>
+        <item>20%</item>
+    </string-array>
+
+    <string name="stock_title">成本价计算器</string>
+    <string name="cost">交易价格</string>
+    <string name="count">股数</string>
+    <string name="add">添加</string>
+    <string name="del">删除</string>
+    <string name="line_uncomplete">当前交易未完成</string>
+    <string name="result_desc">本金：%1$.2f，余额：%2$.2f\n股数：%3$d，成本：%4$.3f\n盈利: %5$d</string>
+</resources>
